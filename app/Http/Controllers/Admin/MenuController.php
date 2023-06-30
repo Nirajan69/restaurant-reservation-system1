@@ -78,6 +78,7 @@ public function update(StoreMenuRequest $request, Menu $menu)
 {
     // $blog->category_id = $request->category_id;
     // $blog->save();
+    dd($request->image);
     $image = $request->image;
     if ($image) {
         if($menu->image)
@@ -85,6 +86,7 @@ public function update(StoreMenuRequest $request, Menu $menu)
         $dbName = 'menu-image-' . time() . '.' . $image->clientExtension();
         $source = $image->getRealPath();
         $destination = 'uploads/menus/'.$dbName;
+        dd($destination);
         copy($source,$destination);
         $menu->update($request->validated() + ['image'=> $dbName]);
     }
