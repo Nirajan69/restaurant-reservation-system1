@@ -11,6 +11,7 @@ use App\Models\Table;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
+
 class TableController extends Controller
 {
     public function create(){
