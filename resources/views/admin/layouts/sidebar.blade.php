@@ -45,7 +45,7 @@
           <use xlink:href="{{ asset ('') }}coreui/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
         </svg> Reservations</a>
       <ul class="nav-group-items">
-        <li class="nav-item"><a class="nav-link" href="{{ route('reservations.create') }}"><span class="nav-icon"></span> Add Reservations</a></li>
+        {{-- <li class="nav-item"><a class="nav-link" href="{{ route('reservations.create') }}"><span class="nav-icon"></span> Add Reservations</a></li> --}}
         <li class="nav-item"><a class="nav-link" href="{{ route('reservations.index') }}"><span class="nav-icon"></span> Reservations List</a></li>
       </ul>
     </li>

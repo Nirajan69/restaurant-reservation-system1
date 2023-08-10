@@ -33,6 +33,9 @@
                                                 No Image
 
                                                 @endif
+                                                {{-- <img  src="{{ asset('') }}uploads/menus/{{$menu->image}}" alt="image" height="65px"> --}}
+
+
                                             </td>
                                             <td
                                                 class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">

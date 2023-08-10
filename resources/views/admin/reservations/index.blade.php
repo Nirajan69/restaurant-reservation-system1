@@ -54,7 +54,9 @@
 
             <tbody>
                 @foreach ($reservations as $reservation)
+
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <td scope="row">{{ $loop->iteration }}</td>
                         <td
                             class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $reservation->first_name }} {{ $reservation->last_name }}
@@ -68,8 +70,8 @@
                             {{ $reservation->res_date }}
                         </td>
                         <td
-                            class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                            {{ $reservation->table->name }}
+                            {{-- class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                            {{ $reservation->table}} --}}
                         </td>
                         <td
                             class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
@@ -77,12 +79,12 @@
                         </td>
                         <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                             <div class="flex space-x-2">
-                                <a href="{{ route('admin.reservations.edit', $reservation->id) }}"
-                                    class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg  text-white">Edit</a>
+                                <a href="{{ route('reservations.edit', $reservation->id) }}"
+                                    class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg  text-black">Edit</a>
                                 <form
-                                    class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-white"
+                                    class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-black"
                                     method="POST"
-                                    action="{{ route('admin.reservations.destroy', $reservation->id) }}"
+                                    action="{{ route('reservations.destroy', $reservation->id) }}"
                                     onsubmit="return confirm('Are you sure?');">
                                     @csrf
                                     @method('DELETE')
