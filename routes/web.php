@@ -4,16 +4,12 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TableController;
-<<<<<<< HEAD
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Frontend\CategoryController as FrontendCategoryController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\MenuController as FrontendMenuController;
 use App\Http\Controllers\Frontend\ReservationController as FrontendReservationController;
 use App\Http\Controllers\Frontend\WelcomeController;
-use App\Http\Controllers\HomeController;
-=======
-use App\Http\Controllers\Auth\LoginController;
->>>>>>> eb83358b5fc3dfd7c315eeae6bfb70edd901b6d5
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
