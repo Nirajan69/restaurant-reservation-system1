@@ -12,10 +12,8 @@ class WelcomeController extends Controller
     {
         return ('thankyou .. Your reservation is ready');
     }
-public function index(){
-return view('welcome');
+    public function index()
+    {
+        return view('welcome');
+    }
 }
-
-
-}
-
