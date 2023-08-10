@@ -4,12 +4,16 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TableController;
+<<<<<<< HEAD
 use App\Http\Controllers\Frontend\CategoryController as FrontendCategoryController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\MenuController as FrontendMenuController;
 use App\Http\Controllers\Frontend\ReservationController as FrontendReservationController;
 use App\Http\Controllers\Frontend\WelcomeController;
 use App\Http\Controllers\HomeController;
+=======
+use App\Http\Controllers\Auth\LoginController;
+>>>>>>> eb83358b5fc3dfd7c315eeae6bfb70edd901b6d5
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -46,26 +50,10 @@ Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dash
 Route::resource('/menus', MenuController::class);
 Route::resource('/tables', TableController::class);
 Route::resource('/reservations', ReservationController::class);
-// Route::middleware(['tokenMiddleware:token']) ->prefix('admin')->name('admin.')->group(
-//     function () {
-
-//         Route::get('/login', [LoginController::class,'showLoginForm'])->name('login');
-//         Route::post('/login', [LoginController::class,'login'])->name('login');
-//         Route::post('/logout', [LoginController::class,'logout'])->name('logout');
-
-//         // Route::get('/category/{slug}', [WebsiteController::class,'showCategoryPage'])->name('website.category');
-
-
-//         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
-// Route::resource('/menus', MenuController::class)->middleware('auth');
-// Route::resource('/tables', TableController::class)->middleware('auth');
-// Route::resource('/reservations', ReservationController::class);
-//     }
-// );
-
-// Auth::routes();
 
 Auth::routes();
+
+Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
 
 

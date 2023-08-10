@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+<<<<<<< HEAD
 use Illuminate\Http\JsonResponse;
+=======
+>>>>>>> eb83358b5fc3dfd7c315eeae6bfb70edd901b6d5
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -39,6 +42,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb83358b5fc3dfd7c315eeae6bfb70edd901b6d5
     public function logout(Request $request)
     {
         $this->guard()->logout();

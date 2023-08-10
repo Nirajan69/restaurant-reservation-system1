@@ -71,23 +71,24 @@ class MenuController extends Controller
     //         else
     //         $menu->update($request->validated());
 
-    //         return redirect(route('menus.index'))->with('success','menu updated successfully');
-    //     }
-    public function update(StoreMenuRequest $request, Menu $menu)
-    {
-        // $blog->category_id = $request->category_id;
-        // $blog->save();
-        $image = $request->image;
-        if ($image) {
-            if ($menu->image)
-                unlink('uploads/menus/' . $menu->image);
-            $dbName = 'menu-image-' . time() . '.' . $image->clientExtension();
-            $source = $image->getRealPath();
-            $destination = 'uploads/menus/' . $dbName;
-            copy($source, $destination);
-            $menu->update($request->validated() + ['image' => $dbName]);
-        } else
-            $menu->update($request->validated());
+//         return redirect(route('menus.index'))->with('success','menu updated successfully');
+//     }
+public function update(StoreMenuRequest $request, Menu $menu)
+{
+    // $blog->category_id = $request->category_id;
+    // $blog->save();
+    $image = $request->image;
+    if ($image) {
+        if($menu->image)
+        unlink('uploads/menus/'.$menu->image);
+        $dbName = 'menu-image-' . time() . '.' . $image->clientExtension();
+        $source = $image->getRealPath();
+        $destination = 'uploads/menus/'.$dbName;
+        copy($source,$destination);
+        $menu->update($request->validated() + ['image'=> $dbName]);
+    }
+    else
+    $menu->update($request->validated());
 
         return redirect(route('menus.index'))->with('success', 'menu updated successfully');
     }
