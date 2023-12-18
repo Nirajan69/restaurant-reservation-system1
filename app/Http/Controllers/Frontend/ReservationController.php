@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Reservation;
 use App\Models\Table;
 use Carbon\Carbon;
+use Faker\Core\Number;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -26,7 +27,9 @@ class ReservationController extends Controller
             'last_name' => ['required'],
             'email' => ['required', 'email'],
             'res_date' => ['required', 'date'],
-            'tel_number' => ['required'],
+            'tel_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+           // 'tel_number' => ['required', new Number],
+
             'guest_number' => ['required'],
         ]);
 

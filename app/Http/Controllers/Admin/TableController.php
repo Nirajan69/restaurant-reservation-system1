@@ -40,9 +40,13 @@ class TableController extends Controller
 
     public function update(TableStoreRequest $request, Table $table)
         {
-            $table->update($request->validated());
+        //     $table->update($request->validated());
 
-            return to_route('tables.index')->with('success', 'Table updated successfully.');
+        //     return to_route('tables.index')->with('success', 'Table updated successfully.');
+        // }
+        $table->update($request->validated());
+
+            return redirect(route('tables.index'))->with('success', 'Table updated successfully.');
         }
     public function destroy(Table $table)
         {

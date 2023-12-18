@@ -7,10 +7,7 @@
     <div class="flex items-center min-h-screen bg-gray-50">
         <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
             <div class="flex flex-col md:flex-row">
-                {{-- <div class="h-32 md:h-auto md:w-1/2">
-                    <img class="object-cover w-full h-full"
-                        src="https://cdn.pixabay.com/photo/2021/01/15/17/01/green-5919790__340.jpg" alt="img" />
-                </div> --}}
+
                 <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <div class="w-full">
                         <h3 class="mb-4 text-xl font-bold text-blue-600">Make Reservation</h3>
@@ -30,7 +27,10 @@
                                     <input type="text" id="first_name" name="first_name"
                                         value="{{ $reservation->first_name ?? '' }}"
                                         class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
-                                </div>
+
+
+                                    </div>
+
                                 @error('first_name')
                                     <div class="text-sm text-red-400">{{ $message }}</div>
                                 @enderror
@@ -67,6 +67,7 @@
                                         value="{{ $reservation->tel_number ?? '' }}"
                                         class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                                 </div>
+
                                 @error('tel_number')
                                     <div class="text-sm text-red-400">{{ $message }}</div>
                                 @enderror

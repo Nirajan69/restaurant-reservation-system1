@@ -6,11 +6,13 @@
 @section('body')
     <div class="col-12">
         <div class="card m-2 p-4">
-            <form class="" action="{{ route('tables.store') }}" method="post" enctype="multipart/form-data">
+            <form class="" action="{{ route('tables.update', $table->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name</label>
                     <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $table->name }}">
+
                     @error('name')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

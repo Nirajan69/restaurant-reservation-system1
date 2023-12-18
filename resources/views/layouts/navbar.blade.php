@@ -19,18 +19,18 @@
             class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
 
 
-            <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+            <a class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500 hover:text-red-400"
                 href="{{ route('homes.index') }}">Home</a>
-            <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+            <a class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500 hover:text-red-400"
                 href="{{ route('menu.index') }}">Menu</a>
-            <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                href="{{ route('reservations.step.one') }}">Make Reservation</a>
+            <a class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500 hover:text-red-400"
+               color="red" href="{{ route('reservations.step.one') }}">Make Reservation</a>
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" fill="none"
+                {{-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                </svg> --}}
             </div>
         </div>
     </nav>

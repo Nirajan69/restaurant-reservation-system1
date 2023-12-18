@@ -143,6 +143,6 @@ class ReservationController extends Controller
     {
         $reservation->delete();
 
-        return to_route('admin.reservations.index')->with('warning', 'Reservation deleted successfully.');
+        return to_route('reservations.index')->with('warning', 'Reservation deleted successfully.');
     }
 }

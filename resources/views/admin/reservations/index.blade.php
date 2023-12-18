@@ -79,8 +79,8 @@
                         </td>
                         <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                             <div class="flex space-x-2">
-                                <a href="{{ route('reservations.edit', $reservation->id) }}"
-                                    class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg  text-black">Edit</a>
+                                {{-- <a href="{{ route('reservations.edit', $reservation->id) }}"
+                                    class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg  text-black">Edit</a> --}}
                                 <form
                                     class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-black"
                                     method="POST"
